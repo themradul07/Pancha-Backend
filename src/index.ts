@@ -30,17 +30,19 @@ app.use('/api/users', usersRouter);
 app.use('/api/bookings', bookingsRouter);
 app.use('/api/therapies', therapiesRouter);
 
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
 // Connect to MongoDB and start server
 mongoose.connect(process.env.MONGO_URI || '', {})
   .then(() => {
     console.log('MongoDB connected');
-   
+
   })
   .catch((err) => {
     console.error('MongoDB connection error:', err);
     process.exit(1);
   });
 
-   app.listen(PORT, () => {
-      console.log(`Server running on port ${PORT}`);
-    });
+
