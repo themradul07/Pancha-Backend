@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "module": "commonjs",
-    "outDir": "../../../panch-backend/backend/dist",
-    "rootDir": "../../../panch-backend/backend/src",
-    "strict": true,
+    "target": "es2019",
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "strict": true
   },
-  "include": ["../../../panch-backend/backend/src"],
-  "exclude": ["../../../panch-backend/backend/node_modules"]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
